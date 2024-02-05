@@ -1,7 +1,4 @@
 import Image from "next/image";
-const styles = {
-  headers: "text-4xl font-bold text-yellow-600",
-};
 
 export default function Home() {
   return (
@@ -36,19 +33,20 @@ export default function Home() {
           </a>
           <a
             className="text-sm font-medium hover:underline underline-offset-4"
-            href="#"
-          >
-            Features
-          </a>
-          <a
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#"
+            href="#about"
           >
             About
           </a>
           <a
             className="text-sm font-medium hover:underline underline-offset-4"
-            href="#"
+            href="#features"
+          >
+            Features
+          </a>
+
+          <a
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#contact"
           >
             Contact
           </a>
@@ -87,7 +85,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-5 md:py-8 lg:py-11 bg-gray-100 dark:bg-gray-800">
+        <section
+          className="w-full py-5 md:py-8 lg:py-11 bg-gray-100 dark:bg-gray-800"
+          id="about"
+        >
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex justify-between items-center gap-14">
               <Image
@@ -137,7 +138,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
+          id="features"
+        >
           <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
@@ -222,7 +226,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32  bg-gray-100 dark:bg-gray-800">
+        <section
+          className="w-full py-12 md:py-24 lg:py-32  bg-gray-100 dark:bg-gray-800"
+          id="contact"
+        >
           <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">

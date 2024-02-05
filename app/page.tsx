@@ -147,8 +147,8 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
                 Key Features
               </h2>
-              <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl dark:text-gray-400">
-                Find Your Twin, Birthday Sync, Timely Reminders
+              <p className="mx-auto max-w-[700px] text-gray-200 md:text-sm/relaxed lg:text-base/relaxed xl:text-base/relaxed dark:text-gray-400">
+                Our features are designed to make your life easier and more
               </p>
             </div>
             <div className="grid w-full grid-cols-1 lg:grid-cols-3 items-center justify-center gap-8 lg:gap-12 [&amp;>img]:mx-auto">

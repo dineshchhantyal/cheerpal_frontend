@@ -1,57 +1,9 @@
+import { Header } from "@/components/Header/header";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className=" flex flex-col min-h-screen bg-gray-100 dark:bg-gray-800 text-white">
-      <header className="container mx-auto px-4 lg:px-6 h-14 flex items-center">
-        <a className="flex items-center justify-center" href="#">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="h-6 w-6"
-          >
-            {/* <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path> */}
-            <text x="0" y="15" fill="currentColor">
-              CP
-            </text>
-          </svg>
-          <span className="sr-only">CheerPal</span>
-        </a>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <a
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#"
-          >
-            Home
-          </a>
-          <a
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#about"
-          >
-            About
-          </a>
-          <a
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#features"
-          >
-            Features
-          </a>
-
-          <a
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#contact"
-          >
-            Contact
-          </a>
-        </nav>
-      </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container mx-auto px-4 md:px-6">

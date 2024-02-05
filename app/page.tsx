@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header/header";
+import { Platform } from "@/components/Platforms/Platform";
 import Image from "next/image";
 
 export default function Home() {
@@ -60,9 +61,9 @@ export default function Home() {
               />
               <div className="flex-[0.9] flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <div className="inline-block border border-gray-700 rounded-lg px-1 py-1 text-sm dark:bg-gray-800">
+                  <h1 className="inline-block border border-gray-700 rounded-lg px-1 py-1 text-sm dark:bg-gray-800">
                     About CheerPal
-                  </div>
+                  </h1>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                     The symphony of delightful and stress-free connections
                   </h2>
@@ -187,6 +188,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <Platform />
         <section
           className="w-full py-12 md:py-24 lg:py-32  bg-gray-100 dark:bg-gray-800"
           id="contact"

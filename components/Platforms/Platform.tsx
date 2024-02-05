@@ -3,7 +3,7 @@ import React from "react";
 
 export const Platform = () => {
   return (
-    <section className="w-full py-8 md:py-12 lg:py-16 bg-blue-200 dark:bg-gray-700">
+    <section className="w-full py-8 md:py-12 lg:py-16 bg-gray-200 dark:bg-gray-700">
       <div
         className="container mx-auto flex flex-col  lex-col-reverse md:flex-row gap-4 md:gap-8 md:justify-between items-center px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-14
       "

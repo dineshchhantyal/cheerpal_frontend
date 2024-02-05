@@ -218,9 +218,8 @@ export default function Home() {
                 </svg>
                 <h3 className="text-2xl font-bold">Find Your Twin</h3>
                 <p className="text-gray-200 dark:text-gray-400">
-                  Connect with people who share your name or birthdate,
-                  fostering new connections and shared celebrations. Discover
-                  celebrities who share your birthday.
+                  Connect with people who share your name or birthday, creating
+                  a chance to connect with celebrities.
                 </p>
               </div>
             </div>
@@ -235,9 +234,9 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
                 Get Notified
               </h2>
-              <p className="mx-auto max-w-[600px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Sign up to get notified when we launch. We`&apos;ll also send
-                you updates on our progress and exclusive offers.
+              <p className="mx-auto max-w-[600px] text-gray-200 md:text-sm/relaxed lg:text-base/relaxed xl:text-base/relaxed dark:text-gray-400">
+                Sign up to get notified when we launch. We&apos;ll also send you
+                updates on our progress and exclusive offers.
               </p>
             </div>
             <div className="mx-auto w-full max-w-sm space-y-2">
@@ -248,7 +247,7 @@ export default function Home() {
                   type="email"
                 />
                 <button
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 bg-gray-900 text-gray-50 hover:bg-gray-900/90 hover:text-gray-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-white "
                   type="submit"
                 >
                   Sign Up

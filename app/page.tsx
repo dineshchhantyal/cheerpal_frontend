@@ -80,7 +80,7 @@ export default function Home() {
                 </a>
               </div>
               <p className="text-xs text-gray-200 dark:text-gray-400">
-                coming soon of on platforms!
+                coming soon on all platforms!
               </p>
             </div>
           </div>

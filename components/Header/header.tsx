@@ -32,20 +32,20 @@ export const Header = () => {
         </a>
         <a
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#about"
+          href="/#about"
         >
           About
         </a>
         <a
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#features"
+          href="/#features"
         >
           Features
         </a>
 
         <a
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#contact"
+          href="/#contact"
         >
           Contact
         </a>

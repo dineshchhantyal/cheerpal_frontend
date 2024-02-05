@@ -95,7 +95,8 @@ export default function Home() {
                 width="450"
                 height="210"
                 alt="Image"
-                className="mx-auto overflow-hidden object-cover object-center lg:order-last"
+                className="mx-auto overflow-hidden object-cover object-center lg:order-last hidden lg:block
+                "
               />
               <div className="flex-[0.9] flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
@@ -160,16 +161,13 @@ export default function Home() {
                   strokeLinejoin="round"
                   className="h-12 w-12"
                 >
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                  <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
                 </svg>
-                <h3 className="text-2xl font-bold">Find Your Twin</h3>
+                <h3 className="text-2xl font-bold">Timely Reminders</h3>
                 <p className="text-gray-200 dark:text-gray-400">
-                  Connect with people who share your name or birthdate,
-                  fostering new connections and shared celebrations. Discover
-                  celebrities who share your birthday.
+                  Receive personalized reminders to never miss a celebration,
+                  ensuring you&apos;re always ready to spread joy.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4">
@@ -209,13 +207,16 @@ export default function Home() {
                   strokeLinejoin="round"
                   className="h-12 w-12"
                 >
-                  <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
-                  <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
-                <h3 className="text-2xl font-bold">Timely Reminders</h3>
+                <h3 className="text-2xl font-bold">Find Your Twin</h3>
                 <p className="text-gray-200 dark:text-gray-400">
-                  Receive personalized reminders to never miss a celebration,
-                  ensuring you&apos;re always ready to spread joy.
+                  Connect with people who share your name or birthdate,
+                  fostering new connections and shared celebrations. Discover
+                  celebrities who share your birthday.
                 </p>
               </div>
             </div>

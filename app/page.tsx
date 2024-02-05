@@ -34,7 +34,11 @@ export default function Home() {
                   Learn more
                 </a>
               </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
+              <p
+                className="text-xs bg-gradient-to-br
+             text-transparent bg-clip-text from-gray-900 to-gray-800 dark:from-gray-100 dark:to-gray-900  animate-pulse
+              "
+              >
                 coming soon on all platforms!
               </p>
             </div>
@@ -84,7 +88,10 @@ export default function Home() {
                     </a>
                   </div>
                   <p>
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                    <span
+                      className="text-xs bg-gradient-to-br
+             text-transparent bg-clip-text from-gray-900 to-gray-800 dark:from-gray-100 dark:to-gray-900  animate-pulse"
+                    >
                       coming soon on all platforms!
                     </span>
                   </p>

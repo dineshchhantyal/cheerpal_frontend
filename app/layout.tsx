@@ -22,7 +22,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          "  bg-gray-100 dark:bg-gray-800 dark:text-white text-black transition-colors duration-500 ease-in-out"
+          "bg-gray-100 dark:bg-gray-800 dark:text-white text-black transition-colors duration-500 ease-in-out"
         }
       >
         <Header />

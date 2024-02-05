@@ -12,9 +12,12 @@ export default function Home() {
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                   Welcome to CheerPal
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl dark:text-gray-400">
+                <p
+                  className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400
+                "
+                >
                   The go-to companion for spreading joy and never missing a
-                  birthday celebration.
+                  birthday celebration again!
                 </p>
               </div>
               <div className="space-x-4">
@@ -31,7 +34,7 @@ export default function Home() {
                   Learn more
                 </a>
               </div>
-              <p className="text-xs text-gray-200 dark:text-gray-400">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
                 coming soon on all platforms!
               </p>
             </div>
@@ -81,7 +84,7 @@ export default function Home() {
                     </a>
                   </div>
                   <p>
-                    <span className="text-xs text-gray-200 dark:text-gray-400">
+                    <span className="text-xs text-gray-500 dark:text-gray-400">
                       coming soon on all platforms!
                     </span>
                   </p>
@@ -99,7 +102,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
                 Key Features
               </h2>
-              <p className="mx-auto max-w-[700px] text-gray-200 md:text-sm/relaxed lg:text-base/relaxed xl:text-base/relaxed dark:text-gray-400">
+              <p className="mx-auto max-w-[700px] text-gray-500 md:text-sm/relaxed lg:text-base/relaxed xl:text-base/relaxed dark:text-gray-400">
                 Our features are designed to make your life easier and more
               </p>
             </div>
@@ -121,7 +124,7 @@ export default function Home() {
                   <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
                 </svg>
                 <h3 className="text-2xl font-bold">Timely Reminders</h3>
-                <p className="text-gray-200 dark:text-gray-400">
+                <p className="text-gray-500 dark:text-gray-400">
                   Receive personalized reminders to never miss a celebration,
                   ensuring you&apos;re always ready to spread joy.
                 </p>
@@ -145,7 +148,7 @@ export default function Home() {
                   <line x1="3" x2="21" y1="10" y2="10"></line>
                 </svg>
                 <h3 className="text-2xl font-bold">Birthday Sync</h3>
-                <p className="text-gray-200 dark:text-gray-400">
+                <p className="text-gray-500 dark:text-gray-400">
                   Easily sync birthdays of loved ones from multiple social media
                   and contact lists into one app.
                 </p>
@@ -169,7 +172,7 @@ export default function Home() {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
                 <h3 className="text-2xl font-bold">Find Your Twin</h3>
-                <p className="text-gray-200 dark:text-gray-400">
+                <p className="text-gray-500 dark:text-gray-400">
                   Connect with people who share your name or birthday, creating
                   a chance to connect with celebrities.
                 </p>
@@ -186,7 +189,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
                 Get Notified
               </h2>
-              <p className="mx-auto max-w-[600px] text-gray-200 md:text-sm/relaxed lg:text-base/relaxed xl:text-base/relaxed dark:text-gray-400">
+              <p className="mx-auto max-w-[600px] text-gray-500 md:text-sm/relaxed lg:text-base/relaxed xl:text-base/relaxed dark:text-gray-400">
                 Sign up to get notified when we launch. We&apos;ll also send you
                 updates on our progress and exclusive offers.
               </p>
@@ -205,7 +208,7 @@ export default function Home() {
                   Sign Up
                 </button>
               </form>
-              <p className="text-xs text-gray-200 dark:text-gray-400">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
                 Sign up to get notified when we launch.
                 <a className="underline underline-offset-2" href="#">
                   Terms &amp; Conditions

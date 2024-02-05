@@ -3,7 +3,7 @@ import React from "react";
 export const Header = () => {
   return (
     <header className="container mx-auto px-4 lg:px-6 h-14 flex items-center">
-      <a className="flex items-center justify-center" href="#">
+      <a className="flex items-center justify-center" href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -26,7 +26,7 @@ export const Header = () => {
       <nav className="ml-auto flex gap-4 sm:gap-6">
         <a
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#"
+          href="/"
         >
           Home
         </a>

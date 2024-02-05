@@ -5,9 +5,270 @@ const styles = {
 
 export default function Home() {
   return (
-    <main className="px-24 py-8">
-      <h1 className={styles.headers}>Cheerpal</h1>
-      <div className="flex"></div>
-    </main>
+    <div className=" flex flex-col min-h-screen bg-gray-100 dark:bg-gray-800 text-white">
+      <header className="container mx-auto px-4 lg:px-6 h-14 flex items-center">
+        <a className="flex items-center justify-center" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-6 w-6"
+          >
+            {/* <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path> */}
+            <text x="0" y="15" fill="currentColor">
+              CP
+            </text>
+          </svg>
+          <span className="sr-only">CheerPal</span>
+        </a>
+        <nav className="ml-auto flex gap-4 sm:gap-6">
+          <a
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
+            Home
+          </a>
+          <a
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
+            Features
+          </a>
+          <a
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
+            About
+          </a>
+          <a
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
+            Contact
+          </a>
+        </nav>
+      </header>
+      <main className="flex-1">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                  Welcome to CheerPal
+                </h1>
+                <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl dark:text-gray-400">
+                  The go-to companion for spreading joy and never missing a
+                  birthday celebration.
+                </p>
+              </div>
+              <div className="space-x-4">
+                <button
+                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 hover:cursor-not-allowed"
+                  disabled
+                >
+                  Download App
+                </button>
+                <a
+                  className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200  bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                  href="#"
+                >
+                  Learn more
+                </a>
+              </div>
+              <p className="text-xs text-gray-200 dark:text-gray-400">
+                coming soon of on platforms!
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-5 md:py-8 lg:py-11 bg-gray-100 dark:bg-gray-800">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex justify-between items-center gap-14">
+              <Image
+                src="/hero.svg"
+                width="450"
+                height="210"
+                alt="Image"
+                className="mx-auto overflow-hidden object-cover object-center lg:order-last"
+              />
+              <div className="flex-[0.9] flex flex-col justify-center space-y-4">
+                <div className="space-y-2">
+                  <div className="inline-block border border-gray-700 rounded-lg px-1 py-1 text-sm dark:bg-gray-800">
+                    About CheerPal
+                  </div>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                    The symphony of delightful and stress-free connections
+                  </h2>
+                  <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    CheerPal is a symphony of delightful and stress-free
+                    connections, emphasizing its seamless birthday syncing,
+                    timely reminders, and event coordination.
+                  </p>
+                </div>
+                <div className="">
+                  <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                    <button
+                      className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 hover:cursor-not-allowed"
+                      disabled
+                    >
+                      Download App
+                    </button>
+                    <a
+                      className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800  dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300 "
+                      href="#"
+                    >
+                      Tour the Platform
+                    </a>
+                  </div>
+                  <p>
+                    <span className="text-xs text-gray-200 dark:text-gray-400">
+                      coming soon on all platforms!
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+          <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+            <div className="space-y-3">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                Key Features
+              </h2>
+              <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl dark:text-gray-400">
+                Find Your Twin, Birthday Sync, Timely Reminders
+              </p>
+            </div>
+            <div className="grid w-full grid-cols-1 lg:grid-cols-3 items-center justify-center gap-8 lg:gap-12 [&amp;>img]:mx-auto">
+              <div className="flex flex-col items-center space-y-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-12 w-12"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <h3 className="text-2xl font-bold">Find Your Twin</h3>
+                <p className="text-gray-200 dark:text-gray-400">
+                  Connect with people who share your name or birthdate,
+                  fostering new connections and shared celebrations. Discover
+                  celebrities who share your birthday.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-12 w-12"
+                >
+                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                  <line x1="16" x2="16" y1="2" y2="6"></line>
+                  <line x1="8" x2="8" y1="2" y2="6"></line>
+                  <line x1="3" x2="21" y1="10" y2="10"></line>
+                </svg>
+                <h3 className="text-2xl font-bold">Birthday Sync</h3>
+                <p className="text-gray-200 dark:text-gray-400">
+                  Easily sync birthdays of loved ones from multiple social media
+                  and contact lists into one app.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-12 w-12"
+                >
+                  <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                  <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+                </svg>
+                <h3 className="text-2xl font-bold">Timely Reminders</h3>
+                <p className="text-gray-200 dark:text-gray-400">
+                  Receive personalized reminders to never miss a celebration,
+                  ensuring you&apos;re always ready to spread joy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32  bg-gray-100 dark:bg-gray-800">
+          <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
+            <div className="space-y-3">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+                Get Notified
+              </h2>
+              <p className="mx-auto max-w-[600px] text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                Sign up to get notified when we launch. We`&apos;ll also send
+                you updates on our progress and exclusive offers.
+              </p>
+            </div>
+            <div className="mx-auto w-full max-w-sm space-y-2">
+              <form className="flex space-x-2">
+                <input
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 max-w-lg flex-1"
+                  placeholder="Enter your email"
+                  type="email"
+                />
+                <button
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                  type="submit"
+                >
+                  Sign Up
+                </button>
+              </form>
+              <p className="text-xs text-gray-200 dark:text-gray-400">
+                Sign up to get notified when we launch.
+                <a className="underline underline-offset-2" href="#">
+                  Terms &amp; Conditions
+                </a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6">
+        <p className="text-xs text-gray-200 dark:text-gray-400">
+          © 2024 CheerPal. All rights reserved.
+        </p>
+        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+          <a className="text-xs hover:underline underline-offset-4" href="#">
+            Terms of Service
+          </a>
+          <a className="text-xs hover:underline underline-offset-4" href="#">
+            Privacy
+          </a>
+        </nav>
+      </footer>
+    </div>
   );
 }

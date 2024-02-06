@@ -9,7 +9,7 @@ export const Platform = () => {
       "
       >
         <div>
-          <h1 className="text-xl font-bold tracking-normal sm:text-2xl text-primary">
+          <h1 className="text-xl font-bold tracking-normal sm:text-2xl text-primary dark:text-gray-100">
             Platform
           </h1>
           <p className="max-w-[600px] text-gray-500 dark:text-gray-400">

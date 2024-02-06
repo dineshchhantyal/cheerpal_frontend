@@ -227,7 +227,7 @@ export default function Home() {
               </form>
               <p className="text-xs text-gray-500 dark:text-gray-400">
                 Sign up to get notified when we launch.
-                <a className="underline underline-offset-2" href="#">
+                <a className="underline underline-offset-2" href="/terms">
                   Terms &amp; Conditions
                 </a>
               </p>

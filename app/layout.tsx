@@ -28,6 +28,9 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <div id="tsparticles"></div>
+
+        <script src="tsparticles.engine.min.js"></script>
       </body>
     </html>
   );

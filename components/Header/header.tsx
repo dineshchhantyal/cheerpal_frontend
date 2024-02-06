@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 export const Header = () => {
@@ -10,7 +12,7 @@ export const Header = () => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="#ff460f"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -23,32 +25,42 @@ export const Header = () => {
         </svg>
         <span className="sr-only">CheerPal</span>
       </a>
-      <nav className="ml-auto flex gap-4 sm:gap-6">
+      <nav className="ml-auto flex gap-4 sm:gap-6 ">
         <a
-          className="text-sm font-medium hover:underline underline-offset-4"
+          className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
           href="/"
         >
           Home
         </a>
         <a
-          className="text-sm font-medium hover:underline underline-offset-4"
+          className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
           href="/#about"
         >
           About
         </a>
         <a
-          className="text-sm font-medium hover:underline underline-offset-4"
+          className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
           href="/#features"
         >
           Features
         </a>
 
         <a
-          className="text-sm font-medium hover:underline underline-offset-4"
+          className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
           href="/#contact"
         >
           Contact
         </a>
+
+        {/* toggle dark/light mode */}
+        <button
+          className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
+          onClick={() => {
+            document.documentElement.classList.toggle("dark");
+          }}
+        >
+          Toggle Dark Mode
+        </button>
       </nav>
     </header>
   );

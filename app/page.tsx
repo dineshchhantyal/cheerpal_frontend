@@ -1,16 +1,17 @@
+import CanfitteBackground from "@/components/Background/CanfitteBackground";
 import { Header } from "@/components/Header/header";
 import { Platform } from "@/components/Platforms/Platform";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className=" flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                <h1 className="text-3xl text-primary font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none dark:text-gray-50">
                   Welcome to CheerPal
                 </h1>
                 <p
@@ -23,13 +24,13 @@ export default function Home() {
               </div>
               <div className="space-x-4">
                 <button
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 hover:cursor-not-allowed"
+                  className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-primary dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 hover:cursor-not-allowed"
                   disabled
                 >
                   Download App
                 </button>
                 <a
-                  className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200  bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                  className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200  bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
                   href="#"
                 >
                   Learn more
@@ -37,12 +38,13 @@ export default function Home() {
               </div>
               <p
                 className="text-xs bg-gradient-to-br
-             text-transparent bg-clip-text from-gray-900 to-gray-800 dark:from-gray-100 dark:to-gray-900  animate-pulse
+             text-transparent bg-clip-text from-primary to-gray-800 dark:from-gray-100 dark:to-primary  animate-pulse
               "
               >
                 coming soon on all platforms!
               </p>
             </div>
+            <CanfitteBackground />
           </div>
         </section>
         <section
@@ -61,10 +63,13 @@ export default function Home() {
               />
               <div className="flex-[0.9] flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="inline-block border border-gray-700 rounded-lg px-1 py-1 text-sm dark:bg-gray-800">
+                  <h1 className="inline-block border border-secondary text-secondary  rounded-lg px-1 py-1 text-sm dark:bg-gray-800">
                     About CheerPal
                   </h1>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  <h2
+                    className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary dark:text-gray-50
+                  "
+                  >
                     The symphony of delightful and stress-free connections
                   </h2>
                   <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -76,13 +81,13 @@ export default function Home() {
                 <div className="">
                   <div className="flex flex-col gap-2 min-[400px]:flex-row">
                     <button
-                      className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 hover:cursor-not-allowed"
+                      className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-primary dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 hover:cursor-not-allowed"
                       disabled
                     >
                       Download App
                     </button>
                     <a
-                      className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800  dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300 "
+                      className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800  dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300 "
                       href="#"
                     >
                       Tour the Platform
@@ -91,7 +96,7 @@ export default function Home() {
                   <p>
                     <span
                       className="text-xs bg-gradient-to-br
-             text-transparent bg-clip-text from-gray-900 to-gray-800 dark:from-gray-100 dark:to-gray-900  animate-pulse"
+             text-transparent bg-clip-text from-primary to-gray-800 dark:from-gray-100 dark:to-primary  animate-pulse"
                     >
                       coming soon on all platforms!
                     </span>
@@ -107,14 +112,17 @@ export default function Home() {
         >
           <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
             <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+              <h2
+                className="text-3xl font-bold tracking-tighter md:text-4xl text-primary dark:text-gray-50
+              "
+              >
                 Key Features
               </h2>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-sm/relaxed lg:text-base/relaxed xl:text-base/relaxed dark:text-gray-400">
                 Our features are designed to make your life easier and more
               </p>
             </div>
-            <div className="grid w-full grid-cols-1 lg:grid-cols-3 items-center justify-center gap-8 lg:gap-12 [&amp;>img]:mx-auto">
+            <div className="grid my-6 w-full grid-cols-1 lg:grid-cols-3 items-center justify-center gap-8 md lg:gap-12 [&amp;>img]:mx-auto">
               <div className="flex flex-col items-center space-y-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +134,7 @@ export default function Home() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="h-12 w-12"
+                  className="h-12 w-12 text-primary dark:text-gray-50"
                 >
                   <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
                   <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
@@ -148,7 +156,7 @@ export default function Home() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="h-12 w-12"
+                  className="h-12 w-12 text-primary dark:text-gray-50"
                 >
                   <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
                   <line x1="16" x2="16" y1="2" y2="6"></line>
@@ -172,7 +180,7 @@ export default function Home() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="h-12 w-12"
+                  className="h-12 w-12 text-primary dark:text-gray-50"
                 >
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
@@ -196,7 +204,7 @@ export default function Home() {
         >
           <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-primary dark:text-gray-50">
                 Get Notified
               </h2>
               <p className="mx-auto max-w-[600px] text-gray-500 md:text-sm/relaxed lg:text-base/relaxed xl:text-base/relaxed dark:text-gray-400">
@@ -212,7 +220,7 @@ export default function Home() {
                   type="email"
                 />
                 <button
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 bg-gray-900 text-gray-50 hover:bg-gray-900/90 hover:text-gray-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-white "
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 bg-primary text-gray-50 hover:bg-primary/90 hover:text-gray-50 dark:bg-gray-50 dark:text-primary dark:hover:bg-gray-700 dark:hover:text-white "
                   type="submit"
                 >
                   Sign Up

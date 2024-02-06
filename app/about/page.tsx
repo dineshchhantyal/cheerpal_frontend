@@ -11,7 +11,7 @@ export const About = () => {
           At CheerPal, we are dedicated to enhancing the way people connect and
           celebrate special moments with their loved ones. Our company was
           founded with the vision of creating innovative solutions that bring
-          joy and convenience to people's lives.
+          joy and convenience to people&apos;s lives.
         </p>
       </div>
       <div className="">
@@ -36,7 +36,7 @@ export const About = () => {
         </p>
         <p className=" text-gray-500 dark:text-gray-400">
           <strong>Joy:</strong> We aim to spread joy and positivity by helping
-          people celebrate life's special moments in memorable ways.
+          people celebrate life&apos;s special moments in memorable ways.
         </p>
         <p className=" text-gray-500 dark:text-gray-400">
           <strong>Innovation:</strong> We are committed to continuous

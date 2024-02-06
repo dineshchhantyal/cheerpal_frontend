@@ -1,5 +1,4 @@
 import CanfitteBackground from "@/components/Background/CanfitteBackground";
-import { Header } from "@/components/Header/header";
 import { Platform } from "@/components/Platforms/Platform";
 import Image from "next/image";
 

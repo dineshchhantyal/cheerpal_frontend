@@ -25,7 +25,7 @@ export const Header = () => {
         </svg>
         <span className="sr-only">CheerPal</span>
       </a>
-      <nav className="ml-auto flex gap-4 sm:gap-6 ">
+      <nav className="ml-auto flex items-center gap-4 sm:gap-6 ">
         <a
           className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
           href="/"
@@ -54,12 +54,12 @@ export const Header = () => {
 
         {/* toggle dark/light mode */}
         <button
-          className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
+          className="text-sm font-medium hover:text-primary transition-all ease-out dark:hover:text-primary/400 bg-gray-100 dark:bg-gray-800 p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
           onClick={() => {
             document.documentElement.classList.toggle("dark");
           }}
         >
-          Toggle Dark Mode
+          💡
         </button>
       </nav>
     </header>

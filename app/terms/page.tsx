@@ -3,7 +3,7 @@ import React from "react";
 
 const Terms = () => {
   return (
-    <main className="container mx-auto min-h-[calc(100vh-140px)]">
+    <main className="container mx-auto min-h-[calc(100vh-140px)] text-gray-500 dark:text-gray-400">
       <h1
         className="font-bold text-center mt-8 mb-4
       text-gray-900 sm:text-xl md:text-2xl lg:text-3xl xl:text-7xl dark:text-gray-100 dark:text-opacity-90
@@ -11,36 +11,36 @@ const Terms = () => {
       >
         Terms and Conditions
       </h1>
-      <p className="text-gray-700 dark:text-gray-300 dark:text-opacity-90 text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+      <p className=" dark:text-opacity-90 text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
         This is the terms and conditions content.
       </p>
       <ol
         className="
-        text-gray-700 dark:text-gray-300 dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl
+         dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl
         mt-4 mb-8
       "
       >
         <li
           className="
-            text-gray-700 dark:text-gray-300 dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4
+             dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4
         "
         >
           At {config.COMPANY_NAME}, we are committed to protecting your privacy.
           This Privacy Policy explains how we collect, use, disclose, and
           safeguard your information when you visit our website{" "}
-          {config.BASE_URL}
+          {config.DISPLAY_URL}
           or use our services.
         </li>
         <li
           className="
-            text-gray-700 dark:text-gray-300 dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4"
+             dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4"
         >
           Please read this Privacy Policy carefully. If you do not agree with
           the terms of this Privacy Policy, please do not access the site.
         </li>
         <li
           className="
-                text-gray-700 dark:text-gray-300 dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4
+                 dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4
             "
         >
           {config.COMPANY_NAME} reserves the right to make changes to this
@@ -52,13 +52,19 @@ const Terms = () => {
           the changes in any revised Privacy Policy by your continued use of the
           site after the date such revised Privacy Policy is posted.
         </li>
-        <li className="text-gray-700 dark:text-gray-300 dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4">
-          <strong>1. Introduction</strong>
+        <li className=" dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4">
+          <strong
+            className="
+              text-gray-900 dark:text-gray-100 dark:text-opacity-90
+          "
+          >
+            1. Introduction
+          </strong>
           <p>
             These Website Standard Terms and Conditions written on this webpage
-            shall manage your use of our website, {config.BASE_URL} accessible
-            at
-            {config.BASE_URL}.
+            shall manage your use of our website, {config.DISPLAY_URL}{" "}
+            accessible at
+            {config.DISPLAY_URL}.
           </p>
           <p>
             These Terms will be applied fully and affect your use of this
@@ -71,8 +77,14 @@ const Terms = () => {
             Website.
           </p>
         </li>
-        <li className="text-gray-700 dark:text-gray-300 dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4">
-          <strong>2. Intellectual Property Rights</strong>
+        <li className=" dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4">
+          <strong
+            className="
+              text-gray-900 dark:text-gray-100 dark:text-opacity-90
+          "
+          >
+            2. Intellectual Property Rights
+          </strong>
           <p>
             Other than the content you own, under these Terms,{" "}
             {config.COMPANY_NAME}
@@ -84,8 +96,14 @@ const Terms = () => {
             material contained on this Website.
           </p>
         </li>
-        <li className="text-gray-700 dark:text-gray-300 dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4">
-          <strong>3. Restrictions</strong>
+        <li className=" dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4">
+          <strong
+            className="
+              text-gray-900 dark:text-gray-100 dark:text-opacity-90
+          "
+          >
+            3. Restrictions
+          </strong>
           <p>You are specifically restricted from all of the following:</p>
           <ul>
             <li>publishing any Website material in any other media;</li>

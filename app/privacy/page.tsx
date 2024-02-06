@@ -28,7 +28,7 @@ const Privacy = () => {
           At {config.COMPANY_NAME}, we are committed to protecting your privacy.
           This Privacy Policy explains how we collect, use, disclose, and
           safeguard your information when you visit our website{" "}
-          {config.BASE_URL}
+          {config.DISPLAY_URL}
           or use our services.
         </li>
         <li

@@ -61,10 +61,10 @@ const CanfitteBackground = () => {
           preset: "",
           particles: {
             color: {
-              value: "#ffffff",
+              value: "#ff460f",
             },
             links: {
-              color: "#ffffff",
+              color: "#d43d0c",
               distance: 150,
               enable: true,
               opacity: 0.5,

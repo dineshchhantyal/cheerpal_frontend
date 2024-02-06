@@ -35,7 +35,7 @@ const instructions = {
   ],
 };
 
-export const HowToUse = () => {
+const HowToUse = () => {
   return (
     <section className="mb-8 container flex flex-col mx-auto px-4 lg:px-6 py-12 gap-6 md:gap-8 lg:gap-12">
       {Object.entries(instructions).map(([section, steps]) => (

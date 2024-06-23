@@ -24,11 +24,11 @@ const Privacy = () => {
         <li className="text-gray-700 dark:text-gray-300 dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4">
           {config.COMPANY_NAME} reserves the right to make changes to this
           Privacy Policy at any time and for any reason. We will alert you about
-          any changes by updating the "Last Updated" date of this Privacy
-          Policy. You are encouraged to periodically review this Privacy Policy
-          to stay informed of updates. You will be deemed to have been made
-          aware of, will be subject to, and will be deemed to have accepted the
-          changes in any revised Privacy Policy by your continued use of the
+          any changes by updating the &quot;Last Updated&quot; date of this
+          Privacy Policy. You are encouraged to periodically review this Privacy
+          Policy to stay informed of updates. You will be deemed to have been
+          made aware of, will be subject to, and will be deemed to have accepted
+          the changes in any revised Privacy Policy by your continued use of the
           site after the date such revised Privacy Policy is posted.
         </li>
         <li className="text-gray-700 dark:text-gray-300 dark:text-opacity-90 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-4">

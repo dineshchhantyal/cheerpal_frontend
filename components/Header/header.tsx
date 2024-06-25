@@ -30,7 +30,7 @@ export const Header = () => {
         </svg>
         <span className="sr-only">CheerPal</span>
       </a>
-      <div className="flex-grow sr-only">
+      <div className="flex-grow">
         <h1 className="text-base font-semibold text-gray-900 dark:text-gray-100">
           {session?.user ? `Welcome, ${session.user.name}` : "CheerPal"}
         </h1>

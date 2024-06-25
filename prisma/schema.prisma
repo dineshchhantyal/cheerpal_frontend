@@ -42,6 +42,8 @@ model Account {
   id_token          String?
   session_state     String?
   refresh_token_expires_in Int?
+  roles             String[] @default(["user"])
+  // 'user' or 'admin'
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

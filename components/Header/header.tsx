@@ -1,8 +1,10 @@
 "use client";
 
+import { useTheme } from "next-themes";
 import React from "react";
 
 export const Header = () => {
+  const { theme, setTheme } = useTheme();
   return (
     <header className="container mx-auto px-4 lg:px-6 h-14 flex items-center">
       <a className="flex items-center justify-center" href="/">
@@ -56,7 +58,7 @@ export const Header = () => {
         <button
           className="text-sm font-medium hover:text-primary transition-all ease-out dark:hover:text-primary/400 bg-gray-100 dark:bg-gray-800 p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
           onClick={() => {
-            document.documentElement.classList.toggle("dark");
+            setTheme(theme === "dark" ? "light" : "dark");
           }}
         >
           💡

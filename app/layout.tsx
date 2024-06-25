@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header/header";
 import { Footer } from "@/components/Footer/footer";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -103,10 +104,14 @@ export default function RootLayout({
           inter.className +
           " bg-gray-100 dark:bg-gray-800 dark:text-white text-black transition-colors duration-500 ease-in-out"
         }
+        suppressHydrationWarning
       >
-        <Header />
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

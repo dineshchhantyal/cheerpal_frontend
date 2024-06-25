@@ -1,6 +1,9 @@
 "use client";
 
+import { authOptions } from "@/utils/lib/auth";
+import { getServerSession } from "next-auth";
 import { signIn } from "next-auth/react";
+import { redirect } from "next/navigation";
 import { ChangeEvent, useState } from "react";
 
 export const RegisterForm = () => {

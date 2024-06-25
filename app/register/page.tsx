@@ -1,6 +1,15 @@
 import { RegisterForm } from "@/components/Forms/RegisterForm";
+import { authOptions } from "@/utils/lib/auth";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 
-export default function RegisterPage() {
+export default async function RegisterPage() {
+  const session = await getServerSession(authOptions);
+  console.log(session);
+
+  if (session) {
+    redirect("/profile");
+  }
   return (
     <div
       style={{

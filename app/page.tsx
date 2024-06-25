@@ -1,10 +1,27 @@
+import {
+  LoginButton,
+  RegisterButton,
+  LogoutButton,
+  ProfileButton,
+} from "@/components/atomic/button/auth.button";
 import CanfitteBackground from "@/components/Background/CanfitteBackground";
 import { Platform } from "@/components/Platforms/Platform";
+import { authOptions } from "@/utils/lib/auth";
+import { getServerSession } from "next-auth";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
+  const session = await getServerSession(authOptions);
+  console.log(session);
+
   return (
     <div className="flex flex-col min-h-screen">
+      {/* <div>
+        <LoginButton />
+        <RegisterButton />
+        <LogoutButton />
+        <ProfileButton />
+      </div> */}
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container mx-auto px-4 md:px-6">

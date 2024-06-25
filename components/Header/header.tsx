@@ -1,10 +1,13 @@
 "use client";
 
+import { useSession } from "next-auth/react";
 import { useTheme } from "next-themes";
 import React from "react";
 
 export const Header = () => {
   const { theme, setTheme } = useTheme();
+  const { data: session } = useSession();
+
   return (
     <header className="container mx-auto px-4 lg:px-6 h-14 flex items-center">
       <a className="flex items-center justify-center" href="/">
@@ -27,6 +30,12 @@ export const Header = () => {
         </svg>
         <span className="sr-only">CheerPal</span>
       </a>
+      <div className="flex-grow sr-only">
+        <h1 className="text-base font-semibold text-gray-900 dark:text-gray-100">
+          {session?.user ? `Welcome, ${session.user.name}` : "CheerPal"}
+        </h1>
+      </div>
+
       <nav className="ml-auto flex items-center gap-4 sm:gap-6 ">
         <a
           className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"

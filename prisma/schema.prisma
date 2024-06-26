@@ -20,14 +20,97 @@ model User {
   password      String?
   emailVerified DateTime?
   image         String?
+  dateOfBirth   DateTime?
+  reminderTypePreference String[] @default(["email"]) // 'email', 'sms', 'push', etc.
+  timezone      String?         @default("UTC")
   accounts      Account[]
   sessions      Session[]
+  events        Event[]
+  reminders     Reminder[]
+  tags          Tag[] @relation
+
+
   // Optional for WebAuthn support
   Authenticator Authenticator[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Event {
+  id          String   @id @default(cuid())
+  userId      String
+  name        String
+  type        String   @default("other")// 'birthday', 'anniversary', 'other', etc.
+  tags       Tag[] @relation
+  active      Boolean   @default(true)
+  description String?
+  location    String?
+  date        DateTime
+  scheduleAt  DateTime?
+  timezone    String?   @default("UTC")
+  reminderCount Int    @default(1)
+  reminderIntervalMinutes Int? @default(0) // in minutes (0 means no reminder)
+  reminderTypes ReminderType[] @relation
+
+
+  link        String?
+  files      String[] @default([])
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reminders   Reminder[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, date, active])
+}
+
+model ReminderType {
+  id          String   @id @default(cuid())
+  type        String   @unique
+  description String?
+  events      Event[] @relation
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("reminder_types")
+}
+model Tag {
+  id          String   @id @default(cuid())
+  name        String   @unique @db.VarChar(255)
+  description String?
+  color       String? @default("#000000")
+  events      Event[] @relation
+
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum ReminderStatus {
+  pending
+  sent
+  failed
+}
+
+model Reminder {
+  id          String   @id @default(cuid())
+  eventId     String
+  userId      String
+  reminderAt  DateTime
+  reminderSentAt DateTime?
+  reminderStatus ReminderStatus @default(pending)
+
+  event       Event    @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 
 model Account {
   userId            String

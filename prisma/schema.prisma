@@ -28,6 +28,7 @@ model User {
   events        Event[]
   reminders     Reminder[]
   tags          Tag[] @relation
+  roles         UserRoles[]
 
 
   // Optional for WebAuthn support
@@ -36,6 +37,27 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model UserRoles {
+  id          String   @id @default(cuid())
+  userId      String
+  roleId      String
+  role        Role    @relation(fields: [roleId], references: [id])
+  description String?
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Role {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  users       UserRoles[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 
 model Event {
   id          String   @id @default(cuid())
@@ -74,7 +96,6 @@ model ReminderType {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@map("reminder_types")
 }
 model Tag {
   id          String   @id @default(cuid())
@@ -125,8 +146,6 @@ model Account {
   id_token          String?
   session_state     String?
   refresh_token_expires_in Int?
-  roles             String[] @default(["user"])
-  // 'user' or 'admin'
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

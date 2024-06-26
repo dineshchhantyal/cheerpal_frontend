@@ -44,10 +44,10 @@ $ cp .env.example .env
 $ docker-compose up -d
 
 # Run the Prisma migration
-$ yarn prisma migrate dev --name {migration-name}
+$ yarn migrate
 
 # Generate Prisma client
-$ yarn prisma generate
+$ yarn generate
 
 # Seed the database
 $ yarn prisma db seed

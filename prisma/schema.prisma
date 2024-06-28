@@ -14,22 +14,21 @@ datasource db {
 }
 
 model User {
-  id            String          @id @default(cuid())
-  name          String?
-  email         String          @unique
-  password      String?
-  emailVerified DateTime?
-  image         String?
-  dateOfBirth   DateTime?
-  reminderTypePreference String[] @default(["email"]) // 'email', 'sms', 'push', etc.
-  timezone      String?         @default("UTC")
-  accounts      Account[]
-  sessions      Session[]
-  events        Event[]
-  reminders     Reminder[]
-  tags          Tag[] @relation
-  roles         UserRoles[]
-
+  id                     String      @id @default(cuid())
+  name                   String?
+  email                  String      @unique
+  password               String?
+  emailVerified          DateTime?
+  image                  String?
+  dateOfBirth            DateTime?
+  reminderTypePreference String[]    @default(["email"]) // 'email', 'sms', 'push', etc.
+  timezone               String?     @default("UTC")
+  accounts               Account[]
+  sessions               Session[]
+  events                 Event[]
+  reminders              Reminder[]
+  tags                   Tag[]       @relation
+  roles                  UserRoles[]
 
   // Optional for WebAuthn support
   Authenticator Authenticator[]
@@ -42,44 +41,42 @@ model UserRoles {
   id          String   @id @default(cuid())
   userId      String
   roleId      String
-  role        Role    @relation(fields: [roleId], references: [id])
+  role        Role     @relation(fields: [roleId], references: [id])
   description String?
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
 
 model Role {
-  id          String   @id @default(cuid())
-  name        String   @unique
+  id          String      @id @default(cuid())
+  name        String      @unique
   description String?
   users       UserRoles[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
 }
 
-
 model Event {
-  id          String   @id @default(cuid())
-  userId      String
-  name        String
-  type        String   @default("other")// 'birthday', 'anniversary', 'other', etc.
-  tags       Tag[] @relation
-  active      Boolean   @default(true)
-  description String?
-  location    String?
-  date        DateTime
-  scheduleAt  DateTime?
-  timezone    String?   @default("UTC")
-  reminderCount Int    @default(1)
-  reminderIntervalMinutes Int? @default(0) // in minutes (0 means no reminder)
-  reminderTypes ReminderType[] @relation
+  id                      String         @id @default(cuid())
+  userId                  String
+  name                    String
+  type                    String         @default("other") // 'birthday', 'anniversary', 'other', etc.
+  tags                    Tag[]          @relation
+  active                  Boolean        @default(true)
+  description             String?
+  location                String?
+  date                    DateTime
+  scheduleAt              DateTime?
+  timezone                String?        @default("UTC")
+  reminderCount           Int            @default(1)
+  reminderIntervalMinutes Int?           @default(0) // in minutes (0 means no reminder)
+  reminderTypes           ReminderType[] @relation
 
-
-  link        String?
-  files      String[] @default([])
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  reminders   Reminder[]
+  link      String?
+  files     String[]   @default([])
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reminders Reminder[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -88,24 +85,24 @@ model Event {
 }
 
 model ReminderType {
-  id          String   @id @default(cuid())
-  type        String   @unique
+  id          String  @id @default(cuid())
+  type        String  @unique
   description String?
   events      Event[] @relation
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
 }
+
 model Tag {
-  id          String   @id @default(cuid())
-  name        String   @unique @db.VarChar(255)
+  id          String  @id @default(cuid())
+  name        String  @unique @db.VarChar(255)
   description String?
   color       String? @default("#000000")
   events      Event[] @relation
 
-  userId      String
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -118,33 +115,32 @@ enum ReminderStatus {
 }
 
 model Reminder {
-  id          String   @id @default(cuid())
-  eventId     String
-  userId      String
-  reminderAt  DateTime
+  id             String         @id @default(cuid())
+  eventId        String
+  userId         String
+  reminderAt     DateTime
   reminderSentAt DateTime?
   reminderStatus ReminderStatus @default(pending)
 
-  event       Event    @relation(fields: [eventId], references: [id], onDelete: Cascade)
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  event Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
-
 model Account {
-  userId            String
-  type              String
-  provider          String
-  providerAccountId String
-  refresh_token     String?
-  access_token      String?
-  expires_at        Int?
-  token_type        String?
-  scope             String?
-  id_token          String?
-  session_state     String?
+  userId                   String
+  type                     String
+  provider                 String
+  providerAccountId        String
+  refresh_token            String?
+  access_token             String?
+  expires_at               Int?
+  token_type               String?
+  scope                    String?
+  id_token                 String?
+  session_state            String?
   refresh_token_expires_in Int?
 
   createdAt DateTime @default(now())

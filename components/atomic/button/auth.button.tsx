@@ -5,7 +5,10 @@ import Link from "next/link";
 
 export const LoginButton = () => {
   return (
-    <button style={{ marginRight: 10 }} onClick={() => signIn()}>
+    <button
+      className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
+      onClick={() => signIn()}
+    >
       Sign in
     </button>
   );
@@ -13,7 +16,10 @@ export const LoginButton = () => {
 
 export const RegisterButton = () => {
   return (
-    <Link href="/register" style={{ marginRight: 10 }}>
+    <Link
+      href="/register"
+      className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
+    >
       Register
     </Link>
   );
@@ -21,7 +27,10 @@ export const RegisterButton = () => {
 
 export const LogoutButton = () => {
   return (
-    <button style={{ marginRight: 10 }} onClick={() => signOut()}>
+    <button
+      className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
+      onClick={() => signOut()}
+    >
       Sign Out
     </button>
   );

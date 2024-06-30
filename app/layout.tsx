@@ -4,6 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/Header/header";
 import { Footer } from "@/components/Footer/footer";
 import { Providers } from "./providers";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/utils/lib/auth";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,11 +15,12 @@ export const metadata: Metadata = {
     "Your go-to companion for spreading joy and ensuring you never miss a birthday celebration again!",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getServerSession(authOptions);
   return (
     <html lang="en">
       <head>
@@ -107,7 +110,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <Providers>
-          <Header />
+          <Header session={session} />
           {children}
           <Footer />
         </Providers>

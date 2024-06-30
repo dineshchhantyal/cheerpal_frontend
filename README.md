@@ -35,14 +35,36 @@ $ git clone https://github.com/dineshchhantyal/cheerpal_frontend
 # Go into the repository
 $ cd cheerpal_frontend
 
+# Copy .env.example to .env
+$ cp .env.example .env
+
+# Update the .env file with your own values
+
+# Docker setup
+$ docker-compose up -d
+
+# Run the Prisma migration
+$ yarn migrate
+
+# Generate Prisma client
+$ yarn generate
+
+# Seed the database
+$ yarn prisma db seed
+
 # Install dependencies
-$ npm install
+$ yarn install
 
 # Run the app
-$ npm run dev
+$ yarn dev
+
+# Open the app in your browser
+http://localhost:3000
+
 ```
 
 > **Note**
+> default email: `admin@admin.com`, password `password123` for login as part of @prisma/seed.ts
 > If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
 ## Credits
@@ -51,6 +73,9 @@ This software uses the following open source packages:
 
 - [Node.js](https://nodejs.org/)
 - [Next.js](https://nextjs.org/)
+- [Prisma](https://www.prisma.io/)
+- [Docker](https://www.docker.com/)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ## License
 

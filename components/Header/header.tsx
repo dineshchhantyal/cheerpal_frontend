@@ -1,7 +1,9 @@
 "use client";
-
+import {
+  LoginButton,
+  RegisterButton,
+} from "@/components/atomic/button/auth.button";
 import { Session } from "next-auth";
-import { useSession } from "next-auth/react";
 import { useTheme } from "next-themes";
 import React from "react";
 
@@ -76,23 +78,13 @@ export const Header = ({ session }: HeaderProps) => {
           </a>
           <a
             className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
-            href="/#about"
-          >
-            About
-          </a>
-          <a
-            className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
             href="/#features"
           >
             Features
           </a>
 
-          <a
-            className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
-            href="/#contact"
-          >
-            Contact
-          </a>
+          <LoginButton />
+          <RegisterButton />
 
           {/* toggle dark/light mode */}
           <button

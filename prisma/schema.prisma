@@ -26,9 +26,11 @@ model User {
   accounts               Account[]
   sessions               Session[]
   events                 Event[]
+  recipients             Event[]     @relation("EventRecipients")
   reminders              Reminder[]
   tags                   Tag[]       @relation
   roles                  UserRoles[]
+
 
   // Optional for WebAuthn support
   Authenticator Authenticator[]
@@ -77,6 +79,8 @@ model Event {
   link      String?
   files     String[]   @default([])
   user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  recipients User[]     @relation("EventRecipients")
+
   reminders Reminder[]
 
   createdAt DateTime @default(now())

@@ -24,6 +24,15 @@ async function main() {
     },
   });
 
+  const userCreatedGuest = await prisma.role.upsert({
+    where: { name: "guest" },
+    update: {},
+    create: {
+      name: "guest",
+      description: "This is the guest role",
+    },
+  });
+
   // Create a user and assign the admin role
 
   const password = await hash("password123", 12);

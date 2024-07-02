@@ -47,11 +47,18 @@ export const Header = ({ session }: HeaderProps) => {
       {session ? (
         <nav className="ml-auto flex items-center gap-4 sm:gap-6 ">
           <a
+            href="/"
+            className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
+          >
+            Dashboard
+          </a>
+          <a
             className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
             href="/profile"
           >
             Profile
           </a>
+
           <a
             className="text-sm font-medium hover:underline underline-offset-4 hover:text-primary transition-all ease-out dark:hover:text-primary/400"
             href="/api/auth/signout"

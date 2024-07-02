@@ -7,6 +7,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Dashboard = () => {
   return (
@@ -22,10 +23,17 @@ const Dashboard = () => {
                 Track and manage all your upcoming events.
               </CardDescription>
             </div>
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <PlusIcon className="h-5 w-5" />
-              <span className="sr-only">Create Event Reminder</span>
-            </Button>
+            <Link href="/add-event">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full"
+                aria-label="Create Event Reminder"
+              >
+                <PlusIcon className="h-5 w-5" />
+                <span className="sr-only">Create Event Reminder</span>
+              </Button>
+            </Link>
           </div>
         </CardHeader>
         <CardContent>
@@ -125,10 +133,12 @@ const Dashboard = () => {
           </div>
         </CardContent>
         <CardFooter className="flex justify-end">
-          <Button size="sm" className="rounded-md">
-            <PlusIcon className="mr-2 h-4 w-4" />
-            Create Event Reminder
-          </Button>
+          <Link href="/add-event">
+            <Button size="sm" className="rounded-md">
+              <PlusIcon className="mr-2 h-4 w-4" />
+              Create Event Reminder
+            </Button>
+          </Link>
         </CardFooter>
       </Card>
     </div>

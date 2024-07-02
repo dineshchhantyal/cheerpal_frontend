@@ -1,6 +1,6 @@
 import CanfitteBackground from "@/components/Background/CanfitteBackground";
 import { Platform } from "@/components/Platforms/Platform";
-import { authOptions } from "@/utils/lib/auth";
+import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import Image from "next/image";
 import { redirect } from "next/navigation";

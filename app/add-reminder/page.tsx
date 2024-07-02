@@ -26,7 +26,7 @@ import {
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
-export function AddReminder() {
+const AddReminder = () => {
   return (
     <Card className="w-full max-w-4xl mx-auto p-6 sm:p-8 md:p-10">
       <CardHeader>
@@ -166,7 +166,7 @@ export function AddReminder() {
       </CardFooter>
     </Card>
   );
-}
+};
 
 function CalendarDaysIcon(props: any) {
   return (

@@ -1,5 +1,5 @@
 import { LogoutButton } from "@/components/atomic/button/auth.button";
-import { authOptions } from "@/utils/lib/auth";
+import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 

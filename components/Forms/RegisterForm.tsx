@@ -1,6 +1,6 @@
 "use client";
 
-import { authOptions } from "@/utils/lib/auth";
+import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import { signIn } from "next-auth/react";
 import { redirect } from "next/navigation";

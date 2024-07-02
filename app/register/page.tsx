@@ -8,7 +8,7 @@ export default async function RegisterPage() {
   console.log(session);
 
   if (session) {
-    redirect("/profile");
+    redirect("/dashboard");
   }
   return (
     <div
